@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Load Bootstrap and jQuery -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <button id="search-for-video" class="btn btn-primary">Download Video</button>
+    <div class="hideOnClick videoFound">
+        <div class="alert alert-success mt-5">Video is downloading</div>
+    </div>
+    <div class="hideOnClick videoNotFound">
+        <div class="alert alert-danger mt-5">Video was not found</div>
+    </div>
+</body>
+</html>

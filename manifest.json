@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    
+    "name": "Frontend Masters Downloader",
+    "version": "1.0",
+    "description": "A frontend masters video downloader.",
+    
+    "icons":{
+        "512": "icons/android-chrome-512x512.png",
+        "192": "icons/android-chrome-192x192.png",
+        "32": "icons/favicon-32x32.png",
+        "16": "icons/favicon-16x16.png"
+    },
+    
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://frontendmasters.com/courses/*/*"],
+            "js": ["jquery.min.js", "content.js"]
+        }
+    ],
+
+    "permissions": [
+        "tabs",
+        "downloads",
+        "webNavigation",
+        "*://frontendmasters.com/courses/*/*"
+    ]
+}
