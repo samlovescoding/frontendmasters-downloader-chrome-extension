@@ -1,8 +1,8 @@
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
     if(request.action == "videoFound"){
         src = request.src
-        video = request.video.replace(/[^a-zA-Z0-9]/gi, '_')
-        course = request.course.replace(/[^a-zA-Z0-9]/gi, '_')
+        video = request.video.replace(/[^\w\-. _]/gi, '_')
+        course = request.course.replace(/[^\w\-. _]/gi, '_')
         index = request.index
         extension = src.split(".").pop().split(/\#|\?/g)[0]
         filename = "Frontend Masters/" + course + "/" + index + ". " + video + "." + extension
